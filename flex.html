@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive-Flex</title>
+</head>
+<style> body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+h2 {
+    text-align: center;
+    margin-top: 20px;
+    color: #333;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.box {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    flex: 1 1 calc(50% - 40px);
+    max-width: calc(50% - 40px);
+    box-sizing: border-box;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.box h3 {
+    margin-top: 0;
+    color: #444;
+}
+
+.box p {
+    margin: 10px 0 0;
+    color: #666;
+}
+
+
+
+.container-2 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+.item {
+    background-color: #007BFF;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+    flex: 1 1 calc(33.33% - 20px); 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.item:hover {
+    background-color: #0056b3;
+    transform: translateY(-5px);
+    transition: all 0.3s ease;
+}
+
+/* Responsive Design */
+
+
+@media (max-width: 768px) {
+    .item {
+        flex: 1 1 calc(50% - 20px); 
+    }
+}
+.box {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+
+@media (max-width: 480px) {
+    .item {
+        flex: 1 1 100%;
+    }
+}
+
+</style>
+<body>
+
+    <h2>Flexible Flex</h2>
+    <div class="container">
+        <div class="box">
+            <h3>Box 1</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, iure.</p>
+        </div>
+        <div class="box">
+            <h3>Box 2</h3>
+            <p>Deserunt rem cum facilis nesciunt facere sequi, autem quidem dolorem!</p>
+        </div>
+    </div>
+    <div class="container-2">
+        <div class="item">item - 1</div>
+        <div class="item">item - 2</div>
+        <div class="item">item - 3</div>
+        <div class="item">item - 4</div>
+        <div class="item">item - 5</div>
+        <div class="item">item - 6</div>
+        <div class="item">item - 7</div>
+    </div>
+</body>
+</html>
